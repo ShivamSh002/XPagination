@@ -68,7 +68,7 @@ const App = () => {
       </div>{" "}
       <div className="btn">
         <button onClick={handleClickPrevious}> Previous </button>{" "}
-        <button> {currentPage} </button>{" "}
+        <div className="pageNo"> {currentPage} </div>{" "}
         <button onClick={handleClickNext}> Next </button>{" "}
       </div>{" "}
     </div>
