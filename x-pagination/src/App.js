@@ -27,11 +27,19 @@ const App = () => {
   const totalPages = Math.ceil(data.length / itemsPerPage);
 
   const handleClickPrevious = () => {
-    setCurrentPage((prevPage) => Math.max(prevPage - 1, 1));
+    if (currentPage === 1) {
+      setCurrentPage(1);
+    } else {
+      setCurrentPage(currentPage - 1);
+    }
   };
 
   const handleClickNext = () => {
-    setCurrentPage((prevPage) => Math.min(prevPage + 1, totalPages));
+    if (currentPage === totalPages) {
+      setCurrentPage(totalPages);
+    } else {
+      setCurrentPage(currentPage + 1);
+    }
   };
 
   const renderData = () => {
