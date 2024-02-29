@@ -15,6 +15,7 @@ const App = () => {
       setData(response.data);
     } catch (error) {
       setError("Failed to fetch data");
+      alert("Failed to fetch data");
     }
   };
 
